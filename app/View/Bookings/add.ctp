@@ -3,14 +3,15 @@
 	<fieldset>
 		<legend><?php echo __('Add Booking'); ?></legend>
 	<?php
-		echo $this->Form->input('room');
-		echo $this->Form->input('faculty');
-		echo $this->Form->input('booking_date');
-		echo $this->Form->input('start_time');
-		echo $this->Form->input('finish_time');
-		echo $this->Form->input('status_room');
-		echo $this->Form->input('comment');
-		echo $this->Form->input('patient_id');
+		echo $this->Form->input('room', array('label'=>'Salón','type'=>'select','options'=>array(
+			'SALÓN 1'=>'SALÓN 1','SALÓN 2'=>'SALÓN 2','SALÓN 3'=>'SALÓN 3','CÁMARA GESELL'=>'CÁMARA GESELL')));
+		echo $this->Form->input('faculty', array('label'=>'Facultad'));
+		echo $this->Form->input('booking_date',array('label'=>'Fecha reserva'));
+		echo $this->Form->input('start_time',array('label'=>'Tiempo de inicio'));
+		echo $this->Form->input('finish_time',array('label'=>'Tiempo de finalización'));
+		echo $this->Form->input('status_room',array('label'=>'Estado de salón'));
+		echo $this->Form->input('comment',array('label'=>'Comentario'));
+		echo $this->Form->input('patient_id',array('label'=>'Paciente'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

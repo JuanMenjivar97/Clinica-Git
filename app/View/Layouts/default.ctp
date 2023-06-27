@@ -26,13 +26,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<?php echo $this->fetch('title'); ?>
 	</title>
 	<?php
+		//FORMATO ORIGINAL DE CAKE PHP
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+
+		// echo $this->Html->css('https://fonts.googleapis.com/icon?family=Material+Icons%27');
+		// echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
+		// echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+		// echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
+
+		//Llamado a menu/barra de navegación
+		//echo $this->element('navbar');
 	?>
 </head>
 <body>
