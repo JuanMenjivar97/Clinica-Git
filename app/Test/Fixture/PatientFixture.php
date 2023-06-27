@@ -22,6 +22,7 @@ class PatientFixture extends CakeTestFixture {
 		'cell_phone_number' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'municipality_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -41,12 +42,13 @@ class PatientFixture extends CakeTestFixture {
 			'last_name' => 'Lorem ipsum dolor sit amet',
 			'age' => 1,
 			'gender' => 'Lorem ip',
-			'birthdate' => '2023-06-19',
+			'birthdate' => '2023-06-27',
 			'address' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'cell_phone_number' => 1,
-			'created' => '2023-06-19 07:16:21',
-			'modified' => '2023-06-19 07:16:21'
+			'created' => '2023-06-27 07:20:40',
+			'modified' => '2023-06-27 07:20:40',
+			'municipality_id' => 1
 		),
 	);
 

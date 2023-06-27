@@ -55,7 +55,7 @@ class BookingsController extends AppController {
 				$this->Session->setFlash(__('The booking could not be saved. Please, try again.'));
 			}
 		}
-		$patients = $this->Booking->Patient->find('list');
+		$patients = $this->Booking->Patient->find('list',array('fields'=>array('id','full_name')));
 		$this->set(compact('patients'));
 	}
 

@@ -12,7 +12,8 @@ class Booking extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'room';
+	//public $displayField = 'first_name';
+	public $virtualFields = array('full_name'=>'CONCAT(Patient.first_name," ",Patient.last_name)');
 
 /**
  * Validation rules
