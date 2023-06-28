@@ -3,16 +3,16 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('room'); ?></th>
-			<th><?php echo $this->Paginator->sort('faculty'); ?></th>
-			<th><?php echo $this->Paginator->sort('booking_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('start_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('finish_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('status_room'); ?></th>
-			<th><?php echo $this->Paginator->sort('comment'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('id','id'); ?></th>
+			<th><?php echo $this->Paginator->sort('room','Salón'); ?></th>
+			<th><?php echo $this->Paginator->sort('faculty','Facultad'); ?></th>
+			<th><?php echo $this->Paginator->sort('booking_date','Fecha de cita'); ?></th>
+			<th><?php echo $this->Paginator->sort('start_time','Tiempo inicio'); ?></th>
+			<th><?php echo $this->Paginator->sort('finish_time','Tiempo finalización'); ?></th>
+			<th><?php echo $this->Paginator->sort('status_room','Estado del salón'); ?></th>
+			<th><?php echo $this->Paginator->sort('comment','Comentarios'); ?></th>
+			<th><?php echo $this->Paginator->sort('created','Creación'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified','Modificación'); ?></th>
 			<th><?php echo $this->Paginator->sort('patient_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -31,7 +31,7 @@
 		<td><?php echo h($booking['Booking']['created']); ?>&nbsp;</td>
 		<td><?php echo h($booking['Booking']['modified']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($booking['Patient']['id'], array('controller' => 'patients', 'action' => 'view', $booking['Patient']['id'])); ?>
+			<?php echo $this->Html->link($booking['Patient']['full_name'], array('controller' => 'patients', 'action' => 'view', $booking['Patient']['id'])); ?>
 		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $booking['Booking']['id'])); ?>

@@ -13,7 +13,8 @@ class PatientsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	//public $components = array('Paginator');
+	public $paginate;
 
 /**
  * index method
@@ -22,7 +23,9 @@ class PatientsController extends AppController {
  */
 	public function index() {
 		$this->Patient->recursive = 0;
-		$this->set('patients', $this->Paginator->paginate());
+		$this->paginate['Patient']['limit']= 5;
+		//$this->set('patients', $this->Paginator->paginate());
+		$this->set('patients', $this->paginate());
 	}
 
 /**

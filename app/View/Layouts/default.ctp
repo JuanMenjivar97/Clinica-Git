@@ -14,8 +14,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
+$cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
+//$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,41 +27,42 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</title>
 	<?php
 		//FORMATO ORIGINAL DE CAKE PHP
-		echo $this->Html->meta('icon');
-		echo $this->Html->css('cake.generic');
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
+		// echo $this->Html->meta('icon');
+		// echo $this->Html->css('cake.generic');
+		// echo $this->fetch('meta');
+		// echo $this->fetch('css');
+		// echo $this->fetch('script');
 
-		// echo $this->Html->css('https://fonts.googleapis.com/icon?family=Material+Icons%27');
-		// echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
-		// echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
-		// echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
+		echo $this->Html->css('https://fonts.googleapis.com/icon?family=Material+Icons%27');
+		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
+		echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+		echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
 
 		//Llamado a menu/barra de navegación
-		//echo $this->element('navbar');
+		echo $this->element('navbar');
 	?>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1><?php //echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
-		<div id="content">
+		<div class="row" id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
-			<?php echo $this->fetch('content'); ?>
+			<div class="col s10 offset-s1"><?php echo $this->fetch('content'); ?></div>
+
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
+			<?php /*echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',
 					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
+				);*/
 			?>
 			<p>
-				<?php echo $cakeVersion; ?>
+				<?php //echo $cakeVersion; ?>
 			</p>
 		</div>
 	</div>
