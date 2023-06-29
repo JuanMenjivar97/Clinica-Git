@@ -1,5 +1,8 @@
 <div class="bookings index">
-	<h2><?php echo __('Bookings'); ?></h2>
+	<div class="col s12">
+	<div  class="col s10"><h2><?php echo __('Reservas'); ?></h2></div>
+	<div class="col s2" style="margin-top: 45px"><strong><?php echo $this->Html->link(__('Nueva Reserva ➕'), array('action' => 'add'),array('class'=>'btn right yellow accent-2 black-text')); ?></div></strong>
+	</div>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -13,8 +16,8 @@
 			<th><?php echo $this->Paginator->sort('comment','Comentarios'); ?></th>
 			<th><?php echo $this->Paginator->sort('created','Creación'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified','Modificación'); ?></th>
-			<th><?php echo $this->Paginator->sort('patient_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?php echo $this->Paginator->sort('patient_id','Paciente'); ?></th>
+			<th class="actions"><?php echo __('Actions','Acciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -45,22 +48,22 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format' => __('Página {:page} of {:pages}, mostrando {:current} registros de {:count} en total, comenzando en el registro {:start}, y terminando en {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->prev('< ' . __('previous '), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ' '));
+		echo $this->Paginator->next(__(' next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
-<div class="actions">
+<!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Booking'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Patients'), array('controller' => 'patients', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Patient'), array('controller' => 'patients', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div> -->

@@ -54,7 +54,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+			'format' => __('Página {:page} of {:pages}, mostrando {:current} registros de {:count} en total, comenzando en el registro {:start}, y terminando en {:end}')
 		));
 		?>	</p>
 		<div class="paging">
