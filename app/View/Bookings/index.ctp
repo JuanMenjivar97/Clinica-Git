@@ -3,6 +3,9 @@
 	<div  class="col s10"><h2><?php echo __('Reservas'); ?></h2></div>
 	<div class="col s2" style="margin-top: 45px"><strong><?php echo $this->Html->link(__('Nueva Reserva ➕'), array('action' => 'add'),array('class'=>'btn right yellow accent-2 black-text')); ?></div></strong>
 	</div>
+	
+	<div class="card-panel">
+	
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -57,6 +60,7 @@
 		echo $this->Paginator->numbers(array('separator' => ' '));
 		echo $this->Paginator->next(__(' next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
+	</div>
 	</div>
 </div>
 <!-- <div class="actions">

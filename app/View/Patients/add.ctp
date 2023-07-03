@@ -12,7 +12,8 @@
 		echo $this->Form->input('address');
 		echo $this->Form->input('email');
 		echo $this->Form->input('cell_phone_number');
-		echo $this->Form->input('municipality_id');
+		//echo $this->Form->input('municipality_id', array('id' => 'label'=>'Municipio');
+		//echo $this->Form->input('department_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -22,9 +23,9 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Patients'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Municipalities'), array('controller' => 'municipalities', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Municipality'), array('controller' => 'municipalities', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Bookings'), array('controller' => 'bookings', 'action' => 'index')); ?> </li>
+		<!-- <li><?php echo $this->Html->link(__('List Municipalities'), array('controller' => 'municipalities', 'action' => 'index')); ?> </li> -->
+		<!-- <li><?php echo $this->Html->link(__('New Municipality'), array('controller' => 'municipalities', 'action' => 'add')); ?> </li> -->
+		<!-- <li><?php echo $this->Html->link(__('List Bookings'), array('controller' => 'bookings', 'action' => 'index')); ?> </li> -->
 		<li><?php echo $this->Html->link(__('New Booking'), array('controller' => 'bookings', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
