@@ -48,11 +48,60 @@ class BookingsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Booking->create();
+			$initime = $this->request->data['Booking']['start_time'];
+			$finishtime = $this->request->data['Booking']['finish_time'];
+			$bookingdate = $this->request->data['Booking']['booking_date'];
+			$datetoday=date('Y-m-d');
+			
+			if ($initime<'08:00:00'||$initime>'17:00:00') {
+				$this->Session->setFlash(__('
+					<script> Swal.fire({
+					position: "top-center",
+					icon: "info",
+					title: "ALTO AHI RUFIAN",
+					showConfirmButton: false,
+					timer: 1800}) 
+				</script>'));
+				return $this->redirect(array('action' => 'add'));
+			}
+
+			if ($finishtime>'17:00:00') {
+				$this->Session->setFlash(__('
+					<script> Swal.fire({
+					position: "top-center",
+					icon: "info",
+					title: "ALTO AHI RUFIAN 2",
+					showConfirmButton: false,
+					timer: 1800}) 
+				</script>'));
+				return $this->redirect(array('action' => 'add'));
+			}
+
+			if ($bookingdate< $datetoday) {
+				$this->Session->setFlash(__('
+					<script> Swal.fire({
+					position: "top-center",
+					icon: "info",
+					title: "ALTO AHI RUFIAN 3",
+					showConfirmButton: false,
+					timer: 1800}) 
+				</script>'));
+				return $this->redirect(array('action' => 'add'));
+			}
+
+			//LINEA DE INSERT EN LA BASE
 			if ($this->Booking->save($this->request->data)) {
-				$this->Session->setFlash(__('The booking has been saved.'));
+				$this->Session->setFlash(__('
+					<script> Swal.fire({
+					position: "top-center",
+					icon: "success",
+					title: "Se ha guardardo la reserva exitosamente",
+					showConfirmButton: false,
+					timer: 1800}) 
+				</script>'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The booking could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('<script> M.toast({html: "¡Advertencia!"}); M.toast({html: "La reserva no se ha podido guardar. Intente nuevamente"}); </script>'));
 			}
 		}
 		$patients = $this->Booking->Patient->find('list',array('fields'=>array('id','full_name')));

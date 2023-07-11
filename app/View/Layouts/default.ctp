@@ -37,6 +37,7 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
 		echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
 		echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
+		echo $this->Html->script('https://cdn.jsdelivr.net/npm/sweetalert2@11');
 
 		//Llamado a menu/barra de navegación
 		echo $this->element('navbar');
@@ -68,6 +69,37 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 				<?php //echo $cakeVersion; ?>
 			</p>
 		</div>
+				<!-- Activador de MATERIALIZE -->
+		<script>
+					document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.datepicker');
+			var instances = M.Datepicker.init(elems,{
+                firstDay: true, 
+                format: 'yyyy-mm-dd',
+                i18n: {
+                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                weekdays: ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+                weekdaysShort: ["Dom","Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+                weekdaysAbbrev: ["D","L", "MA", "MI", "J", "V", "S"],
+                cancel:    'Cancelar',
+                clear:    'Limpiar',
+                done:    'Guardar'
+            }
+            });
+			});
+
+					document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('.timepicker');
+				var instances = M.Timepicker.init(elems,{
+					twelveHour: false
+				});
+			});
+
+						document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('select:not(.swal2-select)');
+				var instances = M.FormSelect.init(elems);
+			});
+		</script>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>
 </body>
