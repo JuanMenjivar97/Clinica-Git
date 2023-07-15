@@ -99,6 +99,13 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 				var elems = document.querySelectorAll('select:not(.swal2-select)');
 				var instances = M.FormSelect.init(elems);
 			});
+
+						document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('.carousel');
+				var instances = M.Carousel.init(elems);
+			});
+
+  
 		</script>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>

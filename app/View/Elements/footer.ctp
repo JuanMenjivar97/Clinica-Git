@@ -9,9 +9,9 @@
                 <h5 class="white-text">También podría interesarle...</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/ueesoficial"><?php echo $this->Html->image('facebook.svg',array('class'=>'col s2'), array('width'=> '50cm'))?></a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
                 </ul>
               </div>
             </div>
