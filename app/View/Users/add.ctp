@@ -7,7 +7,7 @@
 		echo $this->Form->input('last_name');
 		echo $this->Form->input('email');
 		echo $this->Form->input('password');
-		//echo $this->Form->input('role_id');
+		echo $this->Form->input('role_id',array('label' => 'Rol','type' => 'select','options' => array('ADMINISTRADOR' =>'ADMINISTRADOR','TERAPEUTA'=>'TERAPEUTA')));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

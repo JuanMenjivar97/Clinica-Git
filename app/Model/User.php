@@ -135,13 +135,13 @@ class User extends AppModel {
  *
  * @var array
  */
-	// public $belongsTo = array(
-	// 	'Role' => array(
-	// 		'className' => 'Role',
-	// 		'foreignKey' => 'role_id',
-	// 		'conditions' => '',
-	// 		'fields' => '',
-	// 		'order' => ''
-	// 	)
-	// );
+	public $belongsTo = array(
+		'Role' => array(
+			'className' => 'Role',
+			'foreignKey' => 'role_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 }
