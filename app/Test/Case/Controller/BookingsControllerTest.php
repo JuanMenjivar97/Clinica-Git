@@ -13,6 +13,7 @@ class BookingsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.booking',
+		'app.user',
 		'app.patient'
 	);
 

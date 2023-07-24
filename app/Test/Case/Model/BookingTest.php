@@ -13,6 +13,7 @@ class BookingTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.booking',
+		'app.user',
 		'app.patient'
 	);
 
