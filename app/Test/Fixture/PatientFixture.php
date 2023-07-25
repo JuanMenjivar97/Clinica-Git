@@ -11,7 +11,6 @@ class PatientFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
-		'credential_id' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
 		'dui' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 10, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
 		'first_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
 		'last_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
@@ -23,6 +22,7 @@ class PatientFixture extends CakeTestFixture {
 		'cell_phone_number' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
+		'token_exam' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -37,18 +37,18 @@ class PatientFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'credential_id' => 'Lorem ipsum dolor sit amet',
 			'dui' => 'Lorem ip',
 			'first_name' => 'Lorem ipsum dolor sit amet',
 			'last_name' => 'Lorem ipsum dolor sit amet',
 			'status' => 'Lorem ip',
 			'gender' => '',
-			'birthdate' => '2023-07-24',
+			'birthdate' => '2023-07-25',
 			'address' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'cell_phone_number' => 1,
-			'created' => '2023-07-24 07:52:45',
-			'modified' => '2023-07-24 07:52:45'
+			'created' => '2023-07-25 07:29:24',
+			'modified' => '2023-07-25 07:29:24',
+			'token_exam' => 'Lorem ipsum dolor sit amet'
 		),
 	);
 

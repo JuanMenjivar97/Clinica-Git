@@ -55,8 +55,6 @@ class PatientsController extends AppController {
 				$this->Session->setFlash(__('The patient could not be saved. Please, try again.'));
 			}
 		}
-		$credentials = $this->Patient->Credential->find('list');
-		$this->set(compact('credentials'));
 	}
 
 /**
@@ -81,8 +79,6 @@ class PatientsController extends AppController {
 			$options = array('conditions' => array('Patient.' . $this->Patient->primaryKey => $id));
 			$this->request->data = $this->Patient->find('first', $options);
 		}
-		$credentials = $this->Patient->Credential->find('list');
-		$this->set(compact('credentials'));
 	}
 
 /**

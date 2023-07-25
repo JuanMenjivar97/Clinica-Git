@@ -1,10 +1,10 @@
 <?php
-App::uses('Patient', 'Model');
+App::uses('Ipg', 'Model');
 
 /**
- * Patient Test Case
+ * Ipg Test Case
  */
-class PatientTest extends CakeTestCase {
+class IpgTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -12,10 +12,12 @@ class PatientTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.ipg',
+		'app.exam_number',
 		'app.patient',
 		'app.booking',
 		'app.user',
-		'app.exam_number'
+		'app.ppg'
 	);
 
 /**
@@ -25,7 +27,7 @@ class PatientTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Patient = ClassRegistry::init('Patient');
+		$this->Ipg = ClassRegistry::init('Ipg');
 	}
 
 /**
@@ -34,7 +36,7 @@ class PatientTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Patient);
+		unset($this->Ipg);
 
 		parent::tearDown();
 	}

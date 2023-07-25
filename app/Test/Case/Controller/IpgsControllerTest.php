@@ -1,10 +1,10 @@
 <?php
-App::uses('PatientsController', 'Controller');
+App::uses('IpgsController', 'Controller');
 
 /**
- * PatientsController Test Case
+ * IpgsController Test Case
  */
-class PatientsControllerTest extends ControllerTestCase {
+class IpgsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -12,10 +12,12 @@ class PatientsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.ipg',
+		'app.exam_number',
 		'app.patient',
 		'app.booking',
 		'app.user',
-		'app.exam_number'
+		'app.ppg'
 	);
 
 /**
