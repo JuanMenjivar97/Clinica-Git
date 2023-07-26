@@ -1,17 +1,21 @@
 <div class="users index">
-	<h2><?php echo __('Users'); ?></h2>
+	<div class="col s12">
+	<div  class="col s10"><h2><?php echo __('Usuarios'); ?></h2></div>
+	<div class="col s2" style="margin-top: 45px"><strong><?php echo $this->Html->link(__('Nuevo Usuario ➕'), array('action' => 'add'),array('class'=>'btn right yellow accent-2 black-text')); ?></div></strong>
+	</div>
+
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('first_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_role'); ?></th>
-			<th><?php echo $this->Paginator->sort('description'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('id','id'); ?></th>
+			<th><?php echo $this->Paginator->sort('first_name','Nombre'); ?></th>
+			<th><?php echo $this->Paginator->sort('last_name','Apellido'); ?></th>
+			<th><?php echo $this->Paginator->sort('email','Email'); ?></th>
+			<th><?php echo $this->Paginator->sort('password','Contraseña'); ?></th>
+			<th><?php echo $this->Paginator->sort('user_role','Rol de usuario'); ?></th>
+			<th><?php echo $this->Paginator->sort('description','Descripción'); ?></th>
+			<th><?php echo $this->Paginator->sort('created','Creado'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified','Modificado'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>

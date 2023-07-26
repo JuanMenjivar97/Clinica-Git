@@ -1,4 +1,6 @@
 <?php
+
+App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 App::uses('AppModel', 'Model');
 /**
  * User Model
@@ -135,6 +137,14 @@ class User extends AppModel {
 			),
 		),
 	);
+
+	public function	beforeSave($options = array()) {
+		if(isset($this->data[$this->alias]['password']))
+		{
+			$passwordHasher = new BlowfishPasswordHasher();
+			$this->data[$this->alias]['password'] = $passwordHasher->hash($this->data[$this->alias]['password']);
+		}
+	}
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
