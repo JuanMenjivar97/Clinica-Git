@@ -9,5 +9,6 @@
         <li><?php echo $this->Html->link('Pruebas',array('controller' => 'bookings','action'=> 'index'));?></li>
         <li><?php echo $this->Html->link('Usuarios',array('controller' => 'users','action'=> 'index'));?></li>
       </ul>
+      
     </div>
   </nav>
