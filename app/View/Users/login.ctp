@@ -1,3 +1,16 @@
+        <!--CAMPO DE VALIDACIÓN-->
+        <div id="navbar" class="navbar-collapse collapse">
+          <?php echo $this->Form->create('User', array('class' => 'navbar-form navbar-right')); ?>
+            <div class="form-group">
+              <?php echo $this->Form->input('username', array('label' => 'correo', 'class' => 'form-control', 'placeholder' => 'Usuario')); ?>
+            </div>
+            <div class="form-group">
+              <?php echo $this->Form->input('password', array('label' => 'contraseña', 'class' => 'form-control', 'placeholder' => 'Contraseña')); ?>
+            </div>
+            <?php echo $this->Form->button('Acceder', array('class' => 'btn btn-success')); ?>
+            <?php echo $this->Form->end(); ?>
+        </div>
+
 <h1 class='center'>BIENVENIDOS A LA CLINICA PSICOLOGICA UEES</h1>
 
     <!-- <div class="carousel" style="margin-left: -50">

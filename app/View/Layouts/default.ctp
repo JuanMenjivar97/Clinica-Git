@@ -25,6 +25,8 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
+	
+
 	<?php
 		//FORMATO ORIGINAL DE CAKE PHP
 		// echo $this->Html->meta('icon');
@@ -42,6 +44,19 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 				//Llamado a menu/barra de navegación
 		echo $this->element('navbar');
 	?>
+	
+	<style>
+				body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+
+		main {
+			flex: 1 0 auto;
+		}
+	</style>
+
 	</head>
 <body>
 	

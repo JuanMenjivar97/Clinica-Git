@@ -52,6 +52,16 @@ class AppController extends Controller {
         )
     );
 
+    public function isAuthorized($user)
+    {
+        if(isset($user['user_role']) && $user['user_role'] === 'ADMIN')
+        {
+            return true;
+        }
+
+        return false;
+    }
+    
     public function beforeFilter()
     {
         $this->Auth->allow('login','logout');

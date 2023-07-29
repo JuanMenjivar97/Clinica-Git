@@ -7,11 +7,12 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
+			<!-- CAMBIAR EL CAMPO CORREO A USERNAME -->
 			<th><?php echo $this->Paginator->sort('id','id'); ?></th>
 			<th><?php echo $this->Paginator->sort('first_name','Nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('last_name','Apellido'); ?></th>
-			<th><?php echo $this->Paginator->sort('email','Email'); ?></th>
-			<th><?php echo $this->Paginator->sort('password','Contraseña'); ?></th>
+			<th><?php echo $this->Paginator->sort('username','Email'); ?></th>
+			<!-- <th><?php //echo $this->Paginator->sort('password','Contraseña'); ?></th> -->
 			<th><?php echo $this->Paginator->sort('user_role','Rol de usuario'); ?></th>
 			<th><?php echo $this->Paginator->sort('description','Descripción'); ?></th>
 			<th><?php echo $this->Paginator->sort('created','Creado'); ?></th>
@@ -25,8 +26,8 @@
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['first_name']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['last_name']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
+		<!-- <td><?php //echo h($user['User']['password']); ?>&nbsp;</td> -->
 		<td><?php echo h($user['User']['user_role']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['description']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
@@ -62,3 +63,5 @@
 		<li><?php echo $this->Html->link(__('New Booking'), array('controller' => 'bookings', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+
+
