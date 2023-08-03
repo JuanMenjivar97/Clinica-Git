@@ -18,14 +18,14 @@
 		</dd>
 		<dt><?php echo __('Email'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['email']); ?>
+			<?php echo h($user['User']['username']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Password'); ?></dt>
+		<!-- <dt><?php //echo __('Password'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['password']); ?>
+			<?php //echo h($user['User']['password']); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 		<dt><?php echo __('User Role'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['user_role']); ?>

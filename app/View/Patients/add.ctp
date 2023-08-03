@@ -12,7 +12,7 @@
 		echo $this->Form->input('address');
 		echo $this->Form->input('email');
 		echo $this->Form->input('cell_phone_number');
-		echo $this->Form->input('token_exam');
+		//echo $this->Form->input('token_exam');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

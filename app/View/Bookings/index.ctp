@@ -39,10 +39,10 @@
 			<td><?php echo h($booking['Booking']['created']); ?>&nbsp;</td>
 			<td><?php echo h($booking['Booking']['modified']); ?>&nbsp;</td>
 			<td>
-				<?php echo $this->Html->link($booking['User']['id'], array('controller' => 'users', 'action' => 'view', $booking['User']['id'])); ?>
+				<?php echo $this->Html->link($booking['User']['full_name_user'], array('controller' => 'users', 'action' => 'view', $booking['User']['id'])); ?>
 			</td>
 			<td>
-				<?php echo $this->Html->link($booking['Patient']['credential_id'], array('controller' => 'patients', 'action' => 'view', $booking['Patient']['id'])); ?>
+				<?php echo $this->Html->link($booking['Patient']['full_name'], array('controller' => 'patients', 'action' => 'view', $booking['Patient']['id'])); ?>
 			</td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('action' => 'view', $booking['Booking']['id'])); ?>

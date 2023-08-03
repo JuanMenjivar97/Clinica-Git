@@ -5,9 +5,13 @@
 		<?php echo $this->Form->create('Booking'); ?>
 
 		<h5><strong><?php echo __('Agregar reserva'); ?></strong></h5>
-		<div class="input-field col s12 m6">
+		<div class="input-field col s12 m3">
 			<?php echo $this->Form->input('room', array('label'=>'Salón','type'=>'select','options'=>array(
 			'SALÓN 1'=>'SALÓN 1','SALÓN 2'=>'SALÓN 2','SALÓN 3'=>'SALÓN 3','CÁMARA GESELL'=>'CÁMARA GESELL')));?>
+		</div>
+		<div class="input-field col s12 m3">
+		<?php	echo $this->Form->input('status_room',array('label'=>'Estado','type'=>'select','options'=>array(
+			'OCUPADO'=>'OCUPADO','PENDIENTE'=>'PENDIENTE')));?>
 		</div>
 		<div class="input-field col s12 m6">
 		<?php	echo $this->Form->input('faculty', array('label'=>'Facultad','type'=>'select','options'=>array(
@@ -24,12 +28,14 @@
 		<div class="input-field col s12 m6">
 		<?php  //echo $this->Form->input('finish_time',array('label'=>'Tiempo de finalización'));?>
 		</div> -->
-		<div class="input-field col s12 m6">
-		<?php	echo $this->Form->input('status_room',array('label'=>'Salón','type'=>'select','options'=>array(
-			'OCUPADO'=>'OCUPADO','PENDIENTE'=>'PENDIENTE')));?>
-		</div>
+
+		
 		<div class="input-field col s12 m6">
 		<?php	echo $this->Form->input('patient_id',array('label'=>'Paciente'));?>
+		</div>
+
+		<div class="input-field col s12 m6">
+		<?php	echo $this->Form->input('user_id',array('label'=>'Terapeuta'));?>
 		</div>
 					<!-- Opción de tiempo y fecha. Materialize -->
 		<div class="input-field col s12 m4">

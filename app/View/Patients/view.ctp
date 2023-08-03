@@ -1,5 +1,5 @@
 <div class="patients view">
-<h2><?php echo __('Patient'); ?></h2>
+<h2><?php echo __('Vista Pacientes'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>

@@ -15,7 +15,7 @@
 			<th><?php echo $this->Paginator->sort('cell_phone_number'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
-			<th><?php echo $this->Paginator->sort('token_exam'); ?></th>
+			<th><?php //echo $this->Paginator->sort('token_exam'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>

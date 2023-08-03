@@ -14,7 +14,8 @@ class User extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'first_name';
+	//public $displayField = 'first_name';
+	public $virtualFields = array('full_name_user'=>'CONCAT(User.first_name," ",User.last_name)');
 
 /**
  * Validation rules
