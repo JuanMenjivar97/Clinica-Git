@@ -44,7 +44,11 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 				//Llamado a menu/barra de navegación
 		echo $this->element('navbar');
 	?>
-	
+	<style>
+					footer{
+						bottom: 0;
+					}
+				</style>
 	<!-- <style>
 				body {
 			display: flex;
@@ -61,13 +65,11 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 <body>
 	
 	<?php if(isset($currentuser)): ?>
-	<?php echo $this->element('menu'); ?>
+	<?php echo $this->element('navbar'); ?>
 	<?php endif; ?>
 
 	<div class="wrapper">
 
-
-		
 			<div id="header">
 				<h1><?php //echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 			</div>
@@ -79,7 +81,6 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 
 			</div>
 			<div id="footer">
-				
 				<?php 
 					echo $this->element('footer');
 					/*echo $this->Html->link(
@@ -88,11 +89,12 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 						array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
 					);*/
 				?>
+				
 				<p>
 					<?php //echo $cakeVersion; ?>
 				</p>
 			</div>
-					<!-- Activador de MATERIALIZE -->
+					<!-- Activadores de MATERIALIZE -->
 			<script>
 						document.addEventListener('DOMContentLoaded', function() {
 				var elems = document.querySelectorAll('.datepicker');
