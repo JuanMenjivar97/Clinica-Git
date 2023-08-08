@@ -45,7 +45,7 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 		echo $this->element('navbar');
 	?>
 	<style>
-					footer{
+					.footer{
 						bottom: 0;
 					}
 				</style>
@@ -80,7 +80,7 @@ $cakeDescription = __d('cake_dev', 'Clínica Psicologíca UEES');
 				<div class="col s10 offset-s1"><?php echo $this->fetch('content'); ?></div>
 
 			</div>
-			<div id="footer">
+			<div id="footer" class="footer">
 				<?php 
 					echo $this->element('footer');
 					/*echo $this->Html->link(
