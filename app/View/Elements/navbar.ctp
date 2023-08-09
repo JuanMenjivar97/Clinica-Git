@@ -20,7 +20,7 @@
         <li><?php echo $this->Html->link('Pruebas',array('controller' => 'bookings','action'=> 'index'));?></li>
         <li><strong><?php echo $this->Html->link('Logout',array('controller' => 'users','action'=> 'logout'));?></strong></li>
         </ul>
-      <?php endif?>
+      <?php endif;?>
      
     </div>
   </nav>

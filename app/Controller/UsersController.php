@@ -15,11 +15,21 @@ class UsersController extends AppController {
  */
 	public $components = array('Paginator');
 
-public function beforeFilter() {
+// public function beforeFilter() {
 	
-	parent::beforeFilter();
+// 	parent::beforeFilter();
 
-	$this->Auth->allow('add');
+// 	$this->Auth->allow('add');
+// }
+
+//permisos del usuario
+public function isAuthorized($user)
+{
+	if($user['rol']!= 'ADMIN' || $user['rol']!= 'TERAPEUTA')
+	{  
+		return true;
+	}
+	return parent::isAuthorized($user);
 }
 
 public function login() 
