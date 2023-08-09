@@ -1,7 +1,7 @@
 
   <nav>
     <div class="nav-wrapper row blue darken-3">
-      <a href="#" class="brand-logo"><?php echo $this->Html->image('UEES-logo.png',array('class'=>'col s1'))?> Clínica Psicologica UEES</a>
+      <a href="#" class="brand-logo"><?php echo $this->Html->image('UEES-logo.png',array('class'=>'col s1'))?> Clínica Psicológica UEES</a>
       
       <?php if($current_user['user_role'] == 'ADMIN'):?>
         <ul id="nav-mobile" class="right hide-on-med-and-down col s3 offset-s1">

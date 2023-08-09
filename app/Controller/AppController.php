@@ -33,7 +33,8 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
     public $components = array(
-    'Session',
+        'RequestHandler',
+        'Session',
     'Auth'=>array(
             'loginRedirect'=>array(
                 'controller'=>'users',
@@ -48,6 +49,7 @@ class AppController extends Controller {
                     'passwordHasher'=>'Blowfish'
                 )
             ),
+            'authorize' => array('Controller'),
             'authError'=> false   
         )
     );
@@ -58,6 +60,7 @@ class AppController extends Controller {
         {
             return true;
         }
+        $this->Session->setFlash('<script> M.toast({html: "¡Acceso denegado!"}); M.toast({html: "Consulte al soporte técnico para más información"}); </script>');
 
         return false;
     }

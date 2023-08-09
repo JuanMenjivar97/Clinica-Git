@@ -10,18 +10,18 @@
 		<table cellpadding="0" cellspacing="0">
 		<thead>
 		<tr>
-				<th><?php echo $this->Paginator->sort('id'); ?></th>
-				<th><?php echo $this->Paginator->sort('room'); ?></th>
-				<th><?php echo $this->Paginator->sort('faculty'); ?></th>
-				<th><?php echo $this->Paginator->sort('booking_date'); ?></th>
-				<th><?php echo $this->Paginator->sort('start_time'); ?></th>
-				<th><?php echo $this->Paginator->sort('finish_time'); ?></th>
-				<th><?php echo $this->Paginator->sort('status_room'); ?></th>
-				<th><?php echo $this->Paginator->sort('comment'); ?></th>
-				<th><?php echo $this->Paginator->sort('created'); ?></th>
-				<th><?php echo $this->Paginator->sort('modified'); ?></th>
-				<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-				<th><?php echo $this->Paginator->sort('patient_id'); ?></th>
+				<th><?php echo $this->Paginator->sort('id','id'); ?></th>
+				<th><?php echo $this->Paginator->sort('room','Sala'); ?></th>
+				<th><?php echo $this->Paginator->sort('faculty','Facultad'); ?></th>
+				<th><?php echo $this->Paginator->sort('booking_date','Fecha de reserva'); ?></th>
+				<th><?php echo $this->Paginator->sort('start_time','Hora de inicio'); ?></th>
+				<th><?php echo $this->Paginator->sort('finish_time','Hora de finalización'); ?></th>
+				<th><?php echo $this->Paginator->sort('status_room','Estado de la sala'); ?></th>
+				<th><?php echo $this->Paginator->sort('comment','Comentarios'); ?></th>
+				<!-- <th><?php echo $this->Paginator->sort('created'); ?></th>
+				<th><?php //echo $this->Paginator->sort('modified'); ?></th> -->
+				<th><?php echo $this->Paginator->sort('user_id','Terapeuta'); ?></th>
+				<th><?php echo $this->Paginator->sort('patient_id','Paciente'); ?></th>
 				<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 		</thead>
@@ -36,8 +36,8 @@
 			<td><?php echo h($booking['Booking']['finish_time']); ?>&nbsp;</td>
 			<td><?php echo h($booking['Booking']['status_room']); ?>&nbsp;</td>
 			<td><?php echo h($booking['Booking']['comment']); ?>&nbsp;</td>
-			<td><?php echo h($booking['Booking']['created']); ?>&nbsp;</td>
-			<td><?php echo h($booking['Booking']['modified']); ?>&nbsp;</td>
+			<!-- <td><?php //echo h($booking['Booking']['created']); ?>&nbsp;</td>
+			<td><?php //echo h($booking['Booking']['modified']); ?>&nbsp;</td> -->
 			<td>
 				<?php echo $this->Html->link($booking['User']['full_name_user'], array('controller' => 'users', 'action' => 'view', $booking['User']['id'])); ?>
 			</td>
@@ -56,7 +56,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+			'format' => __('Página {:page} de {:pages}, mostrandose {:current} registros de {:count} en total, empezando en el registro {:start}, terminando en {:end}')
 		));
 		?>	</p>
 		<div class="paging">
@@ -72,10 +72,10 @@
 <!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Booking'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Patients'), array('controller' => 'patients', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Patient'), array('controller' => 'patients', 'action' => 'add')); ?> </li>
+		<li><?php //echo $this->Html->link(__('New Booking'), array('action' => 'add')); ?></li>
+		<li><?php //echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php //echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php //echo $this->Html->link(__('List Patients'), array('controller' => 'patients', 'action' => 'index')); ?> </li>
+		<li><?php //echo $this->Html->link(__('New Patient'), array('controller' => 'patients', 'action' => 'add')); ?> </li>
 	</ul>
 </div> -->

@@ -25,7 +25,7 @@ class UsersController extends AppController {
 //permisos del usuario
 public function isAuthorized($user)
 {
-	if($user['rol']!= 'ADMIN' || $user['rol']!= 'TERAPEUTA')
+	if($user['user_role']!= 'ADMIN' || $user['user_role']!= 'TERAPEUTA')
 	{  
 		return true;
 	}
